@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JERRY PRO :: 靜水流深</title>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" type="image/ico" href="./icon.ico" />
+    <!--Favicon for Chrome-->
+    <link rel="apple-touch-icon" href="./icon.ico" />
+    <!--Favicon for Safari-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <style>
+    body {
+      color: #fff;
+      background-color: black;
+    }
+
+    section {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-family: "Microsoft JhengHei", "Microsoft Yahei", sans-serif;
+    }
+
+    body::after {
+      content: '';
+      background-image: url('./windows10.png');
+      position: absolute;
+      background-size: 100% 100%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      z-index: -1;
+      opacity: 0.5;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    .clock {
+      text-align: center;
+      font-size: 70px;
+      font-weight: bolder;
+    }
+
+    .Bg {
+      width: 100%;
+      height: 100%;
+    }
+
+    img {
+      overflow: hidden;
+      
+      position: absolute;
+    }
+  </style>
+
+  <body onload="startTime(),title()">
+    <section>
+      <div class="clock">
+        <a class="hours" id="hours">--</a><a class="middle">:</a
+        ><a class="minutes" id="minutes">--</a><a class="middle">:</a
+        ><a class="seconds" id="seconds">--</a>
+      </div>
+      <h1>海内存知己，天涯若比鄰</h1>
+    </section>
+    <!-- <div class="Bg"><img src="./windows10.png" /></div> -->
+
+    <script>
+      function startTime() {
+        const today = new Date();
+        let h = today.getHours();
+        let m = today.getMinutes();
+        let s = today.getSeconds() + 2;
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById("hours").innerHTML = h;
+        document.getElementById("minutes").innerHTML = m;
+        document.getElementById("seconds").innerHTML = s;
+        document.title = h + ":" + m + " :: JERRY PRO";
+        setTimeout(startTime, 100);
+
+        function checkTime(i) {
+          if (i < 10) {
+            i = "0" + i;
+          } // add zero in front of numbers < 10
+          return i;
+        }
+      }
+    </script>
+  </body>
+</html>
