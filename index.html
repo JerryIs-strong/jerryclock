@@ -3,7 +3,7 @@
   <head>
     <title>JERRY PRO :: 靜水流深</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" type="image/ico" href="./icon.ico" />
     <!--Favicon for Chrome-->
     <link rel="apple-touch-icon" href="./icon.ico" />
@@ -33,8 +33,8 @@
     }
 
     body::after {
-      content: '';
-      background-image: url('./windows10.png');
+      content: "";
+      background-image: url("./windows10.png");
       position: absolute;
       background-size: 100% 100%;
       background-position: center;
@@ -49,8 +49,8 @@
       height: 100%;
     }
 
-    h1{
-        text-align: center;
+    h1 {
+      text-align: center;
     }
 
     .clock {
@@ -66,12 +66,12 @@
 
     img {
       overflow: hidden;
-      
+
       position: absolute;
     }
   </style>
 
-  <body onload="startTime(),title()">
+  <body onload="startTime()">
     <section>
       <div class="clock">
         <a class="hours" id="hours">--</a><a class="middle">:</a
@@ -90,14 +90,16 @@
         let s = today.getSeconds() + 2;
         m = checkTime(m);
         s = checkTime(s);
-        if (m > "59"){
-            let m = "0";
+        if (checkTime(s) > 59) {
+          s = "0" + 1;
+        } else {
+          console.log("progressing");
         }
         document.getElementById("hours").innerHTML = h;
         document.getElementById("minutes").innerHTML = m;
         document.getElementById("seconds").innerHTML = s;
         document.title = h + ":" + m + " :: JERRY PRO";
-        setTimeout(startTime, 100);
+        setTimeout(startTime, 1000);
 
         function checkTime(i) {
           if (i < 10) {
