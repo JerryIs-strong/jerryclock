@@ -4,7 +4,7 @@
     <title>JERRY PRO :: 靜水流深</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" type="image/ico" href="./icon.png" />
+    <link rel="shortcut icon" type="image/ico" href="./icon.ico" />
     <!--Favicon for Chrome-->
     <link rel="apple-touch-icon" href="./icon.png" />
     <!--Favicon for Safari-->
@@ -153,7 +153,7 @@
       font-weight: bold;
       margin-top: 10px;
       font-size: 10px;
-      font-family: "Microsoft JhengHei", "Microsoft Yahei", sans-serif;;
+      font-family: "Microsoft JhengHei", "Microsoft Yahei", sans-serif;
       color: black;
       margin: 20px 10px 0 10px;
       cursor: default;
@@ -172,6 +172,13 @@
       z-index: -1;
       transition: all 0.24s ease;
     }
+
+    .closebtn {
+      color: black;
+      z-index: 2;
+      transition: all 0.5s;
+      opacity: 1;
+    }
   </style>
 
   <body onload="startTime(),informationloader()">
@@ -187,6 +194,15 @@
     <section>
       <div class="side-music-bar" id="side-music-bar">
         <div class="infomation">
+          <a href="javascript:void(0)"
+            ><button
+              class="closebtn openbtn"
+              onclick="closeNav()"
+              id="closeNav"
+            >
+              ☰
+            </button></a
+          >
           <div class="info" id="Cookies"></div>
           <div class="info" id="Browser-Application-Name"></div>
           <div class="info" id="Browser-Application-Code-Name"></div>
@@ -200,7 +216,7 @@
         </div>
       </div>
       <div class="Sidebar-mask" id="Sidebar-mask" onclick="closeNav()"></div>
-      <a onclick="javascript:void(0)"
+      <a href="javascript:void(0)"
         ><button class="openbtn" onclick="openNav()" id="closeNav">☰</button></a
       >
     </section>
@@ -212,6 +228,7 @@
         let h = today.getHours();
         let m = today.getMinutes();
         let s = today.getSeconds() + 2;
+        h = checkTime(h);
         m = checkTime(m);
         s = checkTime(s);
         if (checkTime(s) > 59) {
