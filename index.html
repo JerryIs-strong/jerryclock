@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-TW">
   <head>
     <title>JERRY PRO :: 靜水流深</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" type="image/ico" href="./icon.ico" />
+    <link rel="shortcut icon" type="image/ico" href="./icon.png" />
     <!--Favicon for Chrome-->
     <link rel="apple-touch-icon" href="./icon.png" />
     <!--Favicon for Safari-->
@@ -116,6 +116,22 @@
       visibility: visible;
     }
 
+    .information {
+      overflow: hidden;
+      transition: visibility 0s linear 400ms, opacity 400ms;
+      opacity: 0;
+      visibility: hidden;
+      height: 100%;
+    }
+
+    .information-active {
+      overflow: hidden;
+      transition: visibility 0s linear 0s, opacity 400ms;
+      opacity: 1;
+      visibility: visible;
+      height: 100%;
+    }
+
     .sidebar .closebtn {
       position: absolute;
       top: 0;
@@ -179,6 +195,54 @@
       transition: all 0.5s;
       opacity: 1;
     }
+
+    .footer {
+      color: black;
+      position: relative;
+      font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial,
+        sans-serif;
+    }
+
+    .discribe {
+      text-align: center;
+      padding: 0 20px;
+      font-size: 7px;
+      position: absolute;
+      top: 60px;
+      font-weight: 600;
+    }
+
+    .discribe::after {
+      content: "";
+      position: absolute;
+      width: 100px;
+      height: 1px;
+      background-color: #00000024;
+      border-radius: 30px;
+      left: 70px;
+      top: 48px;
+    }
+
+    .github-icon {
+      display: inline-block;
+      position: absolute;
+      top: 120px;
+      right: 20px;
+    }
+
+    .github-icon img {
+      width: 20px;
+      position: relative;
+    }
+
+    .github-icon a {
+      vertical-align: text-bottom;
+      position: relative;
+      line-height: 25px;
+      padding: 0 10px;
+      font-size: 8px;
+      font-weight: 700;
+    }
   </style>
 
   <body onload="startTime(),informationloader()">
@@ -193,7 +257,7 @@
 
     <section>
       <div class="side-music-bar" id="side-music-bar">
-        <div class="infomation">
+        <div class="information" id="information">
           <a href="javascript:void(0)"
             ><button
               class="closebtn openbtn"
@@ -213,6 +277,14 @@
           <div class="info" id="Browser-Language"></div>
           <div class="info" id="Browser-Online"></div>
           <div class="info" id="Java-Enabled"></div>
+          <div class="footer">
+            <div class="discribe">
+              時間基於瀏覽器的時間，可能會產生 ±1 秒的時差
+            </div>
+            <div class="github-icon">
+              <img src="./github.png" /><a>Powered by JerryIs-strong</a>
+            </div>
+          </div>
         </div>
       </div>
       <div class="Sidebar-mask" id="Sidebar-mask" onclick="closeNav()"></div>
@@ -227,11 +299,11 @@
         const today = new Date();
         let h = today.getHours();
         let m = today.getMinutes();
-        let s = today.getSeconds() + 2;
+        let s = today.getSeconds() + 1;
         h = checkTime(h);
         m = checkTime(m);
         s = checkTime(s);
-        if (checkTime(s) > 59) {
+        if (checkTime(s) > 60) {
           s = "0" + 1;
         } else {
           console.log("progressing");
@@ -256,6 +328,7 @@
         document.getElementById("side-music-bar").style.width = "250px";
         document.getElementById("Sidebar-mask").className =
           "Sidebar-mask-active";
+        document.getElementById("information").className = "information-active";
         document.body.style.overflowY = "hidden";
         /*document.getElementById("topBG").style.marginLeft = "250px";*/
       }
@@ -263,6 +336,7 @@
       function closeNav() {
         document.getElementById("side-music-bar").style.width = "0";
         document.getElementById("Sidebar-mask").className = "Sidebar-mask";
+        document.getElementById("information").className = "information";
         document.body.style.overflowY = "visible";
       }
     </script>
