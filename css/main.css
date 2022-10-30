@@ -229,3 +229,9 @@ img {
   font-size: 20px;
   font-weight: bolder;
 }
+
+.footer img {
+  position: relative;
+  width: 25vh;
+  bottom: 0;
+}
