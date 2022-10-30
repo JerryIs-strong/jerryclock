@@ -1,0 +1,231 @@
+body {
+  color: #fff;
+  background-color: black;
+  user-select: none;
+}
+
+.section1 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-family: "Microsoft JhengHei", "Microsoft Yahei", sans-serif;
+}
+
+body::after {
+  content: "";
+  background-image: url("../windows10.png");
+  position: absolute;
+  background-size: 100% 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: -1;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  text-align: center;
+}
+
+.clock {
+  text-align: center;
+  font-size: 70px;
+  font-weight: bolder;
+}
+
+.Bg {
+  width: 100%;
+  height: 100%;
+}
+
+img {
+  overflow: hidden;
+
+  position: absolute;
+}
+
+.side-music-bar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  background-position: center;
+}
+
+.Sidebar-mask {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.263);
+  overflow-x: hidden;
+  transition: visibility 0s linear 400ms, opacity 400ms;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.Sidebar-mask-active {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.263);
+  overflow-x: hidden;
+  transition: visibility 0s linear 0s, opacity 400ms;
+  opacity: 1;
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  visibility: visible;
+}
+
+.information {
+  overflow: hidden;
+  transition: visibility 0s linear 400ms, opacity 400ms;
+  opacity: 0;
+  visibility: hidden;
+  height: 100%;
+}
+
+.information-active {
+  overflow: hidden;
+  transition: visibility 0s linear 0s, opacity 400ms;
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  border-radius: 40px;
+}
+
+.openbtn {
+  font-size: 20px;
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  padding: 6px 22px;
+  border: none;
+  transition: all 0.3s ease 0s;
+  right: 10px;
+  top: 10px;
+  position: absolute;
+}
+
+.openbtn:hover {
+  color: black;
+}
+
+.info {
+  text-decoration: none;
+  color: var(--main-text);
+  display: inline-block;
+  position: relative;
+  z-index: 0;
+  transition: all 0.24s ease;
+  padding: 0 0.2rem;
+  line-height: 1.4em;
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 10px;
+  font-family: "Microsoft JhengHei", "Microsoft Yahei", sans-serif;
+  color: black;
+  margin: 20px 10px 0 10px;
+  cursor: default;
+}
+
+.info::after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  border-radius: 30px;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  background-color: rgba(85, 162, 225, 0.165);
+  z-index: -1;
+  transition: all 0.24s ease;
+}
+
+.closebtn {
+  color: black;
+  z-index: 2;
+  transition: all 0.5s;
+  opacity: 1;
+}
+
+.footer {
+  color: black;
+  position: relative;
+  font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+}
+
+.discribe {
+  text-align: center;
+  padding: 0 20px;
+  font-size: 7px;
+  position: absolute;
+  top: 60px;
+  font-weight: 600;
+}
+
+.discribe::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 1px;
+  background-color: #00000024;
+  border-radius: 30px;
+  left: 70px;
+  top: 48px;
+}
+
+.github-icon {
+  display: inline-block;
+  position: absolute;
+  top: 120px;
+  right: 20px;
+}
+
+.github-icon img {
+  width: 20px;
+  position: relative;
+}
+
+.github-icon a {
+  vertical-align: text-bottom;
+  position: relative;
+  line-height: 25px;
+  padding: 0 10px;
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.date {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bolder;
+}
