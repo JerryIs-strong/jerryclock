@@ -206,8 +206,7 @@ img {
 .github-icon {
   display: inline-block;
   position: absolute;
-  top: 120px;
-  right: 20px;
+  padding: 125px 30px;
 }
 
 .github-icon img {
