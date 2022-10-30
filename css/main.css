@@ -181,6 +181,9 @@ img {
   position: relative;
   font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial,
     sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .discribe {
@@ -204,9 +207,7 @@ img {
 }
 
 .github-icon {
-  display: inline-block;
-  position: absolute;
-  padding: 125px 30px;
+  padding-top: 125px;
 }
 
 .github-icon img {
