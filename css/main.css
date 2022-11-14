@@ -16,7 +16,7 @@ body {
 
 .Bg2::after {
   content: "";
-  background-image: url("../windows10.png");
+  background-image: url("../windows.jpg");
   position: absolute;
   background-size: 100% 100%;
   background-position: center;
@@ -34,7 +34,7 @@ body {
 
 .Bg1::after {
   content: "";
-  background-image: url("../windows.jpg");
+  background-image: url("../windows10.png");
   position: absolute;
   background-size: 100% 100%;
   background-position: center;
