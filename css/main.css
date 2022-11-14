@@ -14,7 +14,7 @@ body {
   font-family: "Microsoft JhengHei", "Microsoft Yahei", sans-serif;
 }
 
-body::after {
+.Bg2::after {
   content: "";
   background-image: url("../windows10.png");
   position: absolute;
@@ -29,6 +29,25 @@ body::after {
   left: 0;
   width: 100%;
   height: 100%;
+  transition: all 0.5s;
+}
+
+.Bg1::after {
+  content: "";
+  background-image: url("../windows.jpg");
+  position: absolute;
+  background-size: 100% 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: -1;
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
 }
 
 h1 {
@@ -234,4 +253,21 @@ img {
   position: relative;
   width: 25vh;
   bottom: 0;
+}
+
+.setting {
+  display: flex;
+  justify-content: center;
+}
+
+.settingBtn{
+  display: block;
+    border: none;
+    background-image: linear-gradient(45deg, #4e87be, #b2849be8);
+    color: #fff;
+    border-radius: 200px;
+    text-align: center;
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
 }
