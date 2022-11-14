@@ -4,17 +4,28 @@
     <title>JERRY PRO :: 靜水流深</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="clock, jerrypro, time" />
+    <meta
+      name="description"
+      content="A Simple HTML clock powered by JERRYPro.xyz to help you manage your time! Simple
+    and Secure"
+    />
+    <meta name="author" content="JERRYPro" />
     <link rel="shortcut icon" type="image/ico" href="./icon.png" />
     <!--Favicon for Chrome-->
     <link rel="apple-touch-icon" href="./icon.png" />
     <!--Favicon for Safari-->
-    <script type="application/javascript" src="./js/main.js"></script>
+    <script type="application/javascript" src="./js/normol.js"></script>
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
   </head>
 
@@ -44,6 +55,10 @@
               ☰
             </button></a
           >
+          <a onclick="setting()" class="setting"
+            ><button class="settingBtn">
+              <i class="fa fa-cogs" aria-hidden="true"></i></button
+          ></a>
           <div class="info" id="Cookies"></div>
           <div class="info" id="Browser-Application-Name"></div>
           <div class="info" id="Browser-Application-Code-Name"></div>
@@ -55,7 +70,7 @@
           <div class="info" id="Browser-Online"></div>
           <div class="info" id="Java-Enabled"></div>
           <div class="footer">
-            <img style="width: 25vh;" src="./footer.png"/>
+            <img style="width: 25vh" src="./footer.png" />
           </div>
         </div>
       </div>
