@@ -16,7 +16,7 @@ body {
 
 .Bg2::after {
   content: "";
-  background-image: url("../windows10.png");
+  background-image: url("../windows.jpg");
   position: absolute;
   background-size: 100% 100%;
   background-position: center;
@@ -34,7 +34,7 @@ body {
 
 .Bg1::after {
   content: "";
-  background-image: url("../windows.jpg");
+  background-image: url("../windows10.png");
   position: absolute;
   background-size: 100% 100%;
   background-position: center;
@@ -71,7 +71,7 @@ img {
   position: absolute;
 }
 
-.side-music-bar {
+.side-bar {
   height: 100%;
   width: 250px;
   position: fixed;
@@ -270,4 +270,11 @@ img {
     width: 200px;
     height: 40px;
     cursor: pointer;
+}
+
+@media screen and (max-width: 256px) {
+  #side-bar {
+     visibility: none;
+     display: none;
+  }
 }
