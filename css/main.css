@@ -197,12 +197,13 @@ img {
 
 .footer {
   color: black;
-  position: relative;
   font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial,
     sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  bottom: calc(env(safe-area-inset-bottom) + 90px);
 }
 
 .discribe {
@@ -251,8 +252,10 @@ img {
 
 .footer img {
   position: relative;
-  width: 25vh;
   bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
 }
 
 .setting {
@@ -260,21 +263,21 @@ img {
   justify-content: center;
 }
 
-.settingBtn{
+.settingBtn {
   display: block;
-    border: none;
-    background-image: linear-gradient(45deg, #4e87be, #b2849be8);
-    color: #fff;
-    border-radius: 200px;
-    text-align: center;
-    width: 200px;
-    height: 40px;
-    cursor: pointer;
+  border: none;
+  background-image: linear-gradient(45deg, #4e87be, #b2849be8);
+  color: #fff;
+  border-radius: 200px;
+  text-align: center;
+  width: 200px;
+  height: 40px;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 256px) {
   #side-bar {
-     visibility: none;
-     display: none;
+    visibility: none;
+    display: none;
   }
 }
