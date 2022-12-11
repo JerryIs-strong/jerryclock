@@ -1,82 +1,70 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
-  <head>
-    <title>JERRY PRO :: 靜水流深</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="clock, jerrypro, time" />
-    <meta
-      name="description"
-      content="A Simple HTML clock powered by jerrypro.xyz to help you manage your time! Simple and Secure"
-    />
-    <meta name="author" content="JERRYPro" />
-    <link rel="shortcut icon" type="image/ico" href="./icon.png" />
-    <!--Favicon for Chrome-->
-    <link rel="apple-touch-icon" href="./icon.png" />
-    <!--Favicon for Safari-->
-    <script type="application/javascript" src="./js/main.js"></script>
-    <link rel="stylesheet" href="./css/main.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
-  </head>
 
-  <body>
-    <section class="section1">
-      <div class="clock">
-        <a class="hours" id="hours">--</a><a class="middle">:</a
-        ><a class="minutes" id="minutes">--</a><a class="middle">:</a
-        ><a class="seconds" id="seconds">--</a>
-      </div>
-      <div class="date" id="date">
-        <a class="year">-</a><a class="middle"> </a><a class="month">-</a
-        ><a class="middle"> </a><a class="day">-</a>
-      </div>
-      <h1>海内存知己，天涯若比鄰</h1>
-    </section>
+<head>
+  <title>JERRY PRO :: 靜水流深</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="clock, jerrypro, time" />
+  <meta name="description"
+    content="A Simple HTML clock powered by jerrypro.xyz to help you manage your time! Simple and Secure" />
+  <meta name="author" content="JERRYPro" />
+  <link rel="shortcut icon" type="image/ico" href="./icon.png" />
+  <!--Favicon for Chrome-->
+  <link rel="apple-touch-icon" href="./icon.png" />
+  <!--Favicon for Safari-->
+  <script type="application/javascript" src="./js/main.js"></script>
+  <link rel="stylesheet" href="./css/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
 
-    <section>
-      <div class="side-bar" id="side-bar">
-        <div class="information" id="information">
-          <a href="javascript:void(0)"
-            ><button
-              class="closebtn openbtn"
-              onclick="closeNav()"
-              id="closeNav"
-            >
-              ☰
-            </button></a
-          >
-          <a onclick="setting()" class="setting"
-            ><button class="settingBtn">
-              <i class="fa fa-cogs" aria-hidden="true"></i></button
-          ></a>
-          <div class="info" id="Cookies"></div>
-          <div class="info" id="Browser-Application-Name"></div>
-          <div class="info" id="Browser-Application-Code-Name"></div>
-          <div class="info" id="Browser-Engine"></div>
-          <div class="info" id="Browser-Version"></div>
-          <div class="info" id="Browser-Agent"></div>
-          <div class="info" id="Browser-Platform"></div>
-          <div class="info" id="Browser-Language"></div>
-          <div class="info" id="Browser-Online"></div>
-          <div class="info" id="Java-Enabled"></div>
-          <div class="footer">
-            <img src="./footer.png" />
-          </div>
+<body>
+  <section class="section1" id="main">
+    <div class="clock">
+      <a class="hours" id="hours">--</a><a class="middle">:</a><a class="minutes" id="minutes">--</a><a
+        class="middle">:</a><a class="seconds" id="seconds">--</a>
+    </div>
+    <div class="date" id="date">
+      <a class="year">-</a><a class="middle"> </a><a class="month">-</a><a class="middle"> </a><a class="day">-</a>
+    </div>
+    <h1>海内存知己，天涯若比鄰</h1>
+  </section>
+
+  <section>
+    <div class="side-bar" id="side-bar">
+      <div class="information" id="information">
+        <a href="javascript:void(0)"><button class="closebtn openbtn" onclick="closeNav()" id="closeNav">
+            ☰
+          </button></a>
+        <a onclick="setting()" class="setting"><button class="settingBtn">
+            <i class="fa fa-cogs" aria-hidden="true"></i></button></a>
+        <div class="info" id="Cookies"></div>
+        <div class="info" id="Browser-Application-Name"></div>
+        <div class="info" id="Browser-Application-Code-Name"></div>
+        <div class="info" id="Browser-Engine"></div>
+        <div class="info" id="Browser-Version"></div>
+        <div class="info" id="Browser-Agent"></div>
+        <div class="info" id="Browser-Platform"></div>
+        <div class="info" id="Browser-Language"></div>
+        <div class="info" id="Browser-Online"></div>
+        <div class="info" id="Java-Enabled"></div>
+        <div class="footer">
+          <img src="./footer.png" />
         </div>
       </div>
-      <div class="Sidebar-mask" id="Sidebar-mask" onclick="closeNav()"></div>
-      <a href="javascript:void(0)"
-        ><button class="openbtn" onclick="openNav()" id="closeNav">☰</button></a
-      >
-    </section>
-  </body>
+    </div>
+    <div class="Sidebar-mask" id="Sidebar-mask" onclick="closeNav()"></div>
+    <div class="functionkey">
+      <span class="material-symbols-outlined" id="full">fullscreen</span>
+      <a href="javascript:void(0)"><button class="openbtn" onclick="openNav()" id="closeNav">☰</button></a>
+    </div>
+
+  </section>
+</body>
+
 </html>
