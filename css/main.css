@@ -147,9 +147,6 @@ img {
   padding: 6px 22px;
   border: none;
   transition: all 0.3s ease 0s;
-  right: 10px;
-  top: 10px;
-  position: absolute;
 }
 
 .openbtn:hover {
@@ -193,6 +190,9 @@ img {
   z-index: 2;
   transition: all 0.5s;
   opacity: 1;
+  right: 10px;
+  top: 10px;
+  position: absolute;
 }
 
 .footer {
@@ -280,4 +280,20 @@ img {
     visibility: none;
     display: none;
   }
+}
+
+.functionkey {
+  right: 10px;
+  top: 10px;
+  position: absolute;
+}
+
+#full{
+  vertical-align: -5px;
+  margin-right: -7px;
+  transition: all 0.3s;
+}
+
+#full:hover {
+  color: black;
 }
