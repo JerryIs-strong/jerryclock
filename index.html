@@ -13,7 +13,7 @@
   <!--Favicon for Chrome-->
   <link rel="apple-touch-icon" href="./icon.png" />
   <!--Favicon for Safari-->
-  <script type="application/javascript" src="./js/main.js"></script>
+  <script type="application/javascript" src="./js/normol.js"></script>
   <link rel="stylesheet" href="./css/main.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,6 +24,7 @@
 </head>
 
 <body>
+  <div class="" id="mainbg"></div>
   <section class="section1" id="main">
     <div class="clock">
       <a class="hours" id="hours">--</a><a class="middle">:</a><a class="minutes" id="minutes">--</a><a
@@ -41,18 +42,19 @@
         <a href="javascript:void(0)"><button class="closebtn openbtn" onclick="closeNav()" id="closeNav">
             ☰
           </button></a>
-        <a onclick="setting()" class="setting"><button class="settingBtn">
-            <i class="fa fa-cogs" aria-hidden="true"></i></button></a>
-        <div class="info" id="Cookies"></div>
-        <div class="info" id="Browser-Application-Name"></div>
-        <div class="info" id="Browser-Application-Code-Name"></div>
-        <div class="info" id="Browser-Engine"></div>
-        <div class="info" id="Browser-Version"></div>
-        <div class="info" id="Browser-Agent"></div>
-        <div class="info" id="Browser-Platform"></div>
-        <div class="info" id="Browser-Language"></div>
-        <div class="info" id="Browser-Online"></div>
-        <div class="info" id="Java-Enabled"></div>
+        <div class="controlcenter">
+          <h2 class="title">Default Wallpaper</h2>
+          <a onclick="setting()" class="setting"><p class="notsupport" id="notsupport"></p><button class="settingBtn" id="settingBtn">
+              <i class="fa fa-cogs" aria-hidden="true"></i></button></a>
+        </div>
+        <div class="controlcenter">
+          <h2 class="title">Custom wallpaper</h2>
+          <div class="control">
+            <input type="url" id="input" class="input" placeholder="https://" />
+            <label for="click" class="inline lable"> Enable Custom mode ?<input type="checkbox" id="click"
+                class="click inline" /></label>
+          </div>
+        </div>
         <div class="footer">
           <img src="./footer.png" />
         </div>
