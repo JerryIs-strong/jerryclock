@@ -357,6 +357,26 @@ img {
   font-size: 15px;
   font-weight: bolder;
   margin-left: 7%;
+  transition: all 0.5s;
+}
+
+.title-false {
+  color: #00000057;
+  font-family: "Microsoft JhengHei", "Microsoft Yahei", sans-serif;
+  font-size: 15px;
+  font-weight: bolder;
+  margin-left: 7%;
+  transition: all 0.5s;
+}
+
+.title-false::before  {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 25px;
+  background: #00000057;
+  margin-right: 10px;
+  vertical-align: -6px;
 }
 
 .title::before {
@@ -371,4 +391,13 @@ img {
 
 .controlcenter{
   padding: 6px 0 10px 0;
+}
+
+#c1{
+  background-color: #77b1912e;
+  transition: all 0.3s;
+}
+
+#c2{
+  transition: all 0.3s;
 }
