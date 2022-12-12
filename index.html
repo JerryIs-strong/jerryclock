@@ -13,7 +13,7 @@
   <!--Favicon for Chrome-->
   <link rel="apple-touch-icon" href="./icon.png" />
   <!--Favicon for Safari-->
-  <script type="application/javascript" src="./js/main.js"></script>
+  <script type="application/javascript" src="./js/normol.js"></script>
   <link rel="stylesheet" href="./css/main.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -42,13 +42,13 @@
         <a href="javascript:void(0)"><button class="closebtn openbtn" onclick="closeNav()" id="closeNav">
             ☰
           </button></a>
-        <div class="controlcenter">
-          <h2 class="title">Default Wallpaper</h2>
+        <div class="controlcenter" id="c1">
+          <h2 class="title" id="title1">Default Wallpaper</h2>
           <a onclick="setting()" class="setting"><p class="notsupport" id="notsupport"></p><button class="settingBtn" id="settingBtn">
               <i class="fa fa-cogs" aria-hidden="true"></i></button></a>
         </div>
-        <div class="controlcenter">
-          <h2 class="title">Custom wallpaper</h2>
+        <div class="controlcenter" id="c2">
+          <h2 class="title-false" id="title2">Custom wallpaper</h2>
           <div class="control">
             <input type="url" id="input" class="input" placeholder="https://" />
             <label for="click" class="inline lable"> Enable Custom mode ?<input type="checkbox" id="click"
