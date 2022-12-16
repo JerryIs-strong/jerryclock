@@ -416,10 +416,6 @@ img {
   padding: 12px;
 }
 
-#control-more-btn:hover ~ #control-more {
-  display: block;
-}
-
 #control-more-active {
   display: block;
   position: absolute;
