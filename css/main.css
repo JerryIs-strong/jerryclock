@@ -422,6 +422,31 @@ img {
   left: 9px;
   background: #0c0c0c63;
   padding: 12px;
+  z-index: 3;
+}
+
+.control-more-mask {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.control-more-mask-active {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  opacity: 1;
+  visibility: visible;
 }
 
 #control-more-icon1,
@@ -478,4 +503,12 @@ img {
 
 .stopwatc-btnp{
   margin-right: 15px;
+}
+
+.auto{
+  color: rgb(70 181 60);
+  font-family: "Microsoft JhengHei", "Microsoft Yahei", sans-serif;
+  text-align: center;
+  font-size: 10px;
+  padding: 0 10px;
 }
