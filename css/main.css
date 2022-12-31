@@ -4,6 +4,7 @@ body {
   color: #fff;
   background-color: black;
   user-select: none;
+  margin: 0;
 }
 
 .section1 {
@@ -469,16 +470,16 @@ img {
   visibility: visible;
 }
 
-.section2{
+.section2 {
   width: 100%;
 }
 
-.section2-start{
+.section2-start {
   display: block;
   visibility: hidden;
 }
 
-.stopwatc-btn{
+.stopwatc-btn {
   padding: 15px 22px;
   border: 3px solid #fff;
   background-color: transparent;
@@ -488,27 +489,28 @@ img {
   font-weight: bold;
 }
 
-.stopwatc-btn:hover{
+.stopwatc-btn:hover {
   padding: 15px 22px;
   border: 3px solid transparent;
   background-color: #fff;
   color: #000;
 }
 
-.stopwatc-btns,.stopwatc-btnr{
+.stopwatc-btns,
+.stopwatc-btnr {
   min-width: 87px;
   margin-right: 15px;
 }
 
-.stop-btn{
+.stop-btn {
   margin-top: 20px;
 }
 
-.stopwatc-btnp{
+.stopwatc-btnp {
   margin-right: 15px;
 }
 
-.auto{
+.auto {
   color: rgb(70 181 60);
   font-family: "Microsoft JhengHei", "Microsoft Yahei", sans-serif;
   text-align: center;
@@ -516,7 +518,14 @@ img {
   padding: 0 10px;
 }
 
-.custom-icon{
+.custom-icon {
   vertical-align: -5px;
   margin-right: 5px;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -2;
 }
