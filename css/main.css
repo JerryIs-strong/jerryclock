@@ -522,10 +522,3 @@ img {
   vertical-align: -5px;
   margin-right: 5px;
 }
-
-canvas {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: -2;
-}
