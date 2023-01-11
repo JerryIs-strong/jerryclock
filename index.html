@@ -26,7 +26,7 @@
 <body>
   <div class="" id="mainbg"></div>
   <section class="section1" id="main">
-    <div class="clock">
+    <div class="clock" id="clock">
       <a class="hours" id="hours">--</a><a class="middle">:</a><a class="minutes" id="minutes">--</a><a
         class="middle">:</a><a class="seconds" id="seconds">--</a>
     </div>
@@ -63,7 +63,10 @@
           <h2 class="title-false" id="title2"><span class="material-symbols-outlined custom-icon">streetview</span>Custom wallpaper</h2>
           <div class="control">
             <input type="url" id="input" class="input" placeholder="https://" />
-            <input type="url" id="inputTitle" class="input" placeholder="微風迎客 軟語伴茶" maxlength="15" />
+            <input type="text" id="inputTitle" class="input" placeholder="微風迎客 軟語伴茶" maxlength="15" />
+            <a class="input-count" id="input-count">0/15</a>
+            <input type="range" id="inputRange" class="input" value="70"  min="70" max="350" step="5"/>
+            <a class="input-count" id="input-count-px">70px</a>
             <label for="click" class="inline lable"> Enable Custom mode ?<input type="checkbox" id="click"
                 class="click inline" /></label>
             <lable class="auto" id="autosaveRemind"></lable>
@@ -84,7 +87,7 @@
         <span class="material-symbols-outlined control-icon" id="control-more-icon2">hourglass_bottom</span>
        </div>
       <span class="material-symbols-outlined control-icon" id="full">fullscreen</span>
-      <a href="javascript:void(0)"><button class="openbtn" onclick="openNav()" id="closeNav">☰</button></a>
+      <a href="javascript:void(0)" onclick="openNav()"><span class="material-symbols-outlined control-icon sp">settings</span></a>
     </div>
   </section>
 </body>
