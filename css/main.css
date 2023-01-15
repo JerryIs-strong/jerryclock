@@ -20,7 +20,7 @@ body {
 
 .Bg2::after {
   content: "";
-  background-image: url("../windows.jpg");
+  background-image: url("https://cdn.jsdelivr.net/gh/JerryIs-strong/jerryclock@main/windows.jpg");
   position: absolute;
   background-size: 100% 100%;
   background-position: center;
@@ -38,7 +38,7 @@ body {
 
 .Bg1::after {
   content: "";
-  background-image: url("../windows10.png");
+  background-image: url("https://cdn.jsdelivr.net/gh/JerryIs-strong/jerryclock@main/windows10.png");
   position: absolute;
   background-size: 100% 100%;
   background-position: center;
@@ -103,7 +103,9 @@ img {
   z-index: 2;
   top: 0;
   right: -100%;
-  background-color: #fff;
+  background-color: #ffffffc7;
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -414,15 +416,6 @@ img {
 
 .controlcenter {
   padding: 6px 0 10px 0;
-}
-
-#c1 {
-  background-color: #77b1912e;
-  transition: all 0.3s;
-}
-
-#c2 {
-  transition: all 0.3s;
 }
 
 #stopwatch {
