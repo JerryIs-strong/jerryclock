@@ -81,7 +81,7 @@ h1 {
   font-weight: 600;
   font-family: 'Noto Sans', sans-serif;
   letter-spacing: -2px;
-  opacity: 0.9;
+  opacity: 0.8;
   overflow-x: hidden;
 }
 
@@ -103,11 +103,11 @@ img {
   z-index: 2;
   top: 0;
   right: -100%;
-  background-color: #ffffffc7;
-  backdrop-filter: blur(30px);
-  -webkit-backdrop-filter: blur(30px);
+  background-color: #ffffff82;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   overflow-x: hidden;
-  transition: 0.5s;
+  transition: .5s;
   padding-top: 60px;
   background-position: center;
 }
@@ -121,9 +121,10 @@ img {
   left: 0;
   background-color: rgba(0, 0, 0, 0.263);
   overflow-x: hidden;
-  transition: visibility 0s linear 600ms, opacity 600ms;
+  transition: visibility 0s linear 200ms, opacity 200ms;
   opacity: 0;
   visibility: hidden;
+  animation: mask-active 0.3s;
 }
 
 .Sidebar-mask-active {
@@ -138,6 +139,7 @@ img {
   transition: visibility 0s linear 0s, opacity 400ms;
   opacity: 1;
   visibility: visible;
+  animation: mask 1s;
 }
 
 .information {
@@ -539,4 +541,24 @@ img {
   font-size: 10px;
   font-family: "Microsoft JhengHei", "Microsoft Yahei", sans-serif;
   margin: 0 0 10px 156px;
+}
+
+@keyframes mask{
+  0% { 
+    width: 100%;
+  }
+
+  100%{
+    width: calc(100% - 250px);
+  }
+}
+
+@keyframes mask-active{
+  0% {
+    width: calc(100% - 250px);
+  }
+
+  100%{
+    width: 100%;
+  }
 }
