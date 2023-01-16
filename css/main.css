@@ -139,7 +139,7 @@ img {
   transition: visibility 0s linear 0s, opacity 400ms;
   opacity: 1;
   visibility: visible;
-  animation: mask 1s;
+  animation: mask 1s forwards;
 }
 
 .information {
