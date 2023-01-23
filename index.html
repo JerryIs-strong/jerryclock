@@ -24,6 +24,7 @@
 </head>
 
 <body>
+  <div id="snackbar"></div>
   <div class="" id="mainbg"></div>
   <section class="section1" id="main">
     <div class="clock" id="clock">
@@ -65,8 +66,6 @@
             <input type="url" id="input" class="input" placeholder="https://" />
             <input type="text" id="inputTitle" class="input" placeholder="微風迎客 軟語伴茶" maxlength="15" />
             <a class="input-count" id="input-count">0/15</a>
-            <input type="range" id="inputRange" class="input" value="70"  min="70" max="350" step="5"/>
-            <a class="input-count" id="input-count-px">70px</a>
             <label for="click" class="inline lable"> Enable Custom mode ?<input type="checkbox" id="click"
                 class="click inline" /></label>
             <lable class="auto" id="autosaveRemind"></lable>
@@ -81,6 +80,7 @@
     <div class="control-more-mask" id="control-more-mask"></div>
     <div class="functionkey">
       <span class="material-symbols-outlined control-icon" id="helpbtn">help</span>
+      <span class="material-symbols-outlined control-icon" id="litebtn" title="Super lite">sync</span>
       <span class="material-symbols-outlined control-icon" id="control-more-btn">time_auto</span>
        <div class="timer" id="control-more">
         <span class="material-symbols-outlined control-icon" id="control-more-icon1">hourglass_top</span>
