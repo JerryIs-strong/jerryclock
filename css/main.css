@@ -316,12 +316,8 @@ img {
   }
 }
 
-@media screen and (max-width: 756px) {
-  #inputRange {
-    display: none;
-  }
-
-  #input-count-px {
+@media screen and (min-width: 1075px) {
+  #urlDone {
     display: none;
   }
 }
@@ -575,6 +571,12 @@ img {
   display: block;
   -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s forwards;
   animation: fadein 0.5s, fadeout 0.5s 2.5s forwards;
+}
+
+#urlDone {
+  margin: 2px 0 6px;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 @keyframes mask {
