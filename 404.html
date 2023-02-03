@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 
 <head>
     <meta charset="UTF-8">
@@ -40,21 +40,35 @@
             opacity: 0.7;
         }
 
-        h1{
+        h1 {
             display: none;
+        }
+
+        h4 {
+            margin: 0;
+            font-size: 1.17em;
+            padding: 10px 5px 0;
+        }
+
+        @media screen and (max-width: 688px) {
+            h4 {
+                display: none;
+            }
         }
     </style>
 </head>
 
 <body>
     <div id="main">
+        <h4>Microsoft Windows [版本 10.0.19045.2546]</h4>
+        <h4>(c) Microsoft Corporation. 著作權所有，並保留一切權利。</h4>
         <h1 id="h1">404</h1>
         <div class="bg"></div>
     </div>
 
     <script>
         window.onload = function () {
-            start(0,  "try to ping to " + document.URL);
+            start(0, "try to ping to " + document.URL);
             function start(counter, messageText) {
                 if (counter < 8) {
                     setTimeout(function () {
