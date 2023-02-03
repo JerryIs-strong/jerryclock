@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opps 404</title>
+    <link rel="shortcut icon" type="image/ico" href="./icon.png">
+
+    <style>
+        body {
+            margin: 0 6px 0 6px;
+            padding: 0;
+            background-color: #000;
+        }
+
+        #main {
+            color: rgb(255, 255, 255);
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        h3::before {
+            content: '[local]$';
+            display: inline-block;
+            margin: 0 8px;
+        }
+
+        .bg {
+            position: absolute;
+            background-image: url('https://jerrypro-wallpapern-api.heyajerry.repl.co');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <h1>404</h1>
+        <div class="bg"></div>
+    </div>
+
+    <script>
+        window.onload = function () {
+            start(0, "error");
+            function start(counter, messageText) {
+                if (counter < 11) {
+                    setTimeout(function () {
+                        const main = document.getElementById("main");
+                        const newDiv = document.createElement("h3");
+                        const message = document.createTextNode(messageText);
+                        newDiv.appendChild(message);
+                        const currentDiv = document.getElementById("div1");
+                        main.insertBefore(newDiv, currentDiv);
+                        counter++;
+                        console.log(counter);
+                        if (counter <= 9) {
+                            start(counter, "error");
+                        } else {
+                            start(counter, "Time out !");
+                            start(counter, "What can I do? Make sure you entered the correct URL, and try refreshing or report the problem to us.");
+                        }
+                    }, 1000);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
