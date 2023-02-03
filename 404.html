@@ -40,10 +40,6 @@
             opacity: 0.7;
         }
 
-        h1 {
-            display: none;
-        }
-
         h4 {
             margin: 0;
             font-size: 1.17em;
@@ -62,7 +58,6 @@
     <div id="main">
         <h4>Microsoft Windows [版本 10.0.19045.2546]</h4>
         <h4>(c) Microsoft Corporation. 著作權所有，並保留一切權利。</h4>
-        <h1 id="h1">404</h1>
         <div class="bg"></div>
     </div>
 
@@ -85,7 +80,6 @@
                         } else {
                             start(counter, "Time out !");
                             start(counter, "What can I do? Make sure you entered the correct URL, and try refreshing or report the problem to us.");
-                            document.getElementById("h1").style.display = "block";
                         }
                     }, 1000);
                 }
