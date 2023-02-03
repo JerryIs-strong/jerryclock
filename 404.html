@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 
 <head>
     <meta charset="UTF-8">
@@ -39,18 +39,22 @@
             z-index: -1;
             opacity: 0.7;
         }
+
+        h1{
+            display: none;
+        }
     </style>
 </head>
 
 <body>
     <div id="main">
-        <h1>404</h1>
+        <h1 id="h1">404</h1>
         <div class="bg"></div>
     </div>
 
     <script>
         window.onload = function () {
-            start(0, "error");
+            start(0,  "try to ping to " + document.URL);
             function start(counter, messageText) {
                 if (counter < 11) {
                     setTimeout(function () {
@@ -63,10 +67,11 @@
                         counter++;
                         console.log(counter);
                         if (counter <= 9) {
-                            start(counter, "error");
+                            start(counter, "cannot ping to " + document.URL);
                         } else {
                             start(counter, "Time out !");
                             start(counter, "What can I do? Make sure you entered the correct URL, and try refreshing or report the problem to us.");
+                            document.getElementById("h1").style.display = "block";
                         }
                     }, 1000);
                 }
