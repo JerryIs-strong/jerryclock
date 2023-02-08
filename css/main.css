@@ -328,6 +328,10 @@ img {
   position: absolute;
 }
 
+.functionkey a{
+  cursor: default;
+}
+
 .control-icon {
   vertical-align: -5px;
   margin-right: -7px;
