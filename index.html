@@ -13,7 +13,7 @@
   <!--Favicon for Chrome-->
   <link rel="apple-touch-icon" href="./icon.png" />
   <!--Favicon for Safari-->
-  <script type="application/javascript" src="./js/main.js"></script>
+  <script type="application/javascript" src="./js/normol.js"></script>
   <link rel="stylesheet" href="./css/main.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -80,15 +80,16 @@
     <div class="Sidebar-mask" id="Sidebar-mask" onclick="closeNav()"></div>
     <div class="control-more-mask" id="control-more-mask"></div>
     <div class="functionkey">
-      <span class="material-symbols-outlined control-icon" id="helpbtn">help</span>
+      <a href="https://helpcenter.jerrypro.xyz/clock/help/docs/#/" target="_blank"><span class="material-symbols-outlined control-icon" id="helpbtn" title="Help center">help</span></a>
+      <a href="https://github.com/JerryIs-strong/jerryclock/issues" target="_blank"><span class="material-symbols-outlined control-icon" title="Bug report">bug_report</span></a>
       <span class="material-symbols-outlined control-icon" id="litebtn" title="Super lite">sync</span>
-      <span class="material-symbols-outlined control-icon" id="control-more-btn">view_cozy</span>
+      <span class="material-symbols-outlined control-icon" id="control-more-btn" title="Extra application">view_cozy</span>
        <div class="timer" id="control-more">
         <span class="material-symbols-outlined control-icon" id="control-more-icon1">hourglass_top</span>
         <span class="material-symbols-outlined control-icon" id="control-more-icon2" style="color: #ffffff52;">hourglass_bottom</span>
        </div>
-      <span class="material-symbols-outlined control-icon" id="full">fit_screen</span>
-      <a href="javascript:void(0)" onclick="openNav()"><span class="material-symbols-outlined control-icon sp">folder_shared</span></a>
+      <span class="material-symbols-outlined control-icon" id="full" title="Full screen">fit_screen</span>
+      <a href="javascript:void(0)" onclick="openNav()"><span class="material-symbols-outlined control-icon sp" title="Control panel">folder_shared</span></a>
     </div>
   </section>
 </body>
