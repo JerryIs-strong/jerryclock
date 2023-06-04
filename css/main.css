@@ -247,6 +247,17 @@ img {
   align-items: center;
   position: absolute;
   bottom: calc(env(safe-area-inset-bottom) + 90px);
+  flex-direction: column;
+}
+
+.version{
+  font-size: 3px;
+  font-weight: bolder;
+  width: fit-content;
+  border: 1px solid var(--main-text-color);
+  color: var(--main-text-color);
+  border-radius: 30px;
+  padding: 3px 10px;
 }
 
 .discribe {
