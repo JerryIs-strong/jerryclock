@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-TW" class="">
 
 <head>
   <title>JERRY PRO :: 靜水流深</title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="keywords" content="clock, jerrypro, time" />
-  <meta name="description"
-    content="可能是世界上最簡單、最自由的時鐘" />
+  <meta name="description" content="可能是世界上最簡單、最自由的時鐘" />
   <meta name="author" content="JERRYPro" />
   <link rel="shortcut icon" type="image/ico" href="./icon.png" />
   <!--Favicon for Chrome-->
   <link rel="apple-touch-icon" href="./icon.png" />
   <!--Favicon for Safari-->
-  <script type="application/javascript" src="./js/main.js"></script>
+  <script type="application/javascript" src="./js/normol.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <link rel="stylesheet" href="./css/main.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -39,13 +39,12 @@
 
   <section class="section1 section2 section2-start" id="main-stopwatch">
     <div class="clock">
-      <a class="minutes" id="stopSeconds">00</a><a
-        class="middle">:</a><a class="seconds" id="stopTens">00</a><br/>
-        <div class="stop-btn" id="stop-btn">
-          <button class="stopwatc-btn stopwatc-btns" id="button-start">Start</button>
-          <button class="stopwatc-btn stopwatc-btnp" id="button-stop">Pause</button>
-          <button class="stopwatc-btn stopwatc-btnr" id="button-reset">Reset</button>
-        </div>
+      <a class="minutes" id="stopMinutes">00</a><a class="middle">:</a><a class="minutes" id="stopSeconds">00</a><a class="middle">:</a><a class="seconds" id="stopTens">00</a><br />
+      <div class="stop-btn" id="stop-btn">
+        <button class="stopwatc-btn stopwatc-btns" id="button-start">Start</button>
+        <button class="stopwatc-btn stopwatc-btnp" id="button-stop">Pause</button>
+        <button class="stopwatc-btn stopwatc-btnr" id="button-reset">Reset</button>
+      </div>
     </div>
   </section>
 
@@ -56,12 +55,16 @@
             ☰
           </button></a>
         <div class="controlcenter" id="c1">
-          <h2 class="title" id="title1"><span class="material-symbols-outlined custom-icon">auto_fix_normal</span>Default Wallpaper</h2>
-          <a class="setting"><p class="notsupport" id="notsupport"></p><button class="settingBtn" id="settingBtn">
-              <i class="fa fa-cogs" aria-hidden="true"></i></button></a>
+          <h2 class="title" id="title1"><span
+              class="material-symbols-outlined custom-icon">auto_fix_normal</span>Default Wallpaper</h2>
+          <a class="setting">
+            <p class="notsupport" id="notsupport"></p><button class="settingBtn" id="settingBtn">
+              <i class="fa fa-cogs" aria-hidden="true"></i></button>
+          </a>
         </div>
         <div class="controlcenter" id="c2">
-          <h2 class="title-false" id="title2"><span class="material-symbols-outlined custom-icon">streetview</span>Custom wallpaper</h2>
+          <h2 class="title-false" id="title2"><span
+              class="material-symbols-outlined custom-icon">streetview</span>Custom wallpaper</h2>
           <div class="control">
             <input type="url" id="input" class="input" placeholder="https://" />
             <label for="input" class="inline lable" id="urlDone">Done</label>
@@ -72,7 +75,14 @@
             <lable class="auto" id="autosaveRemind"></lable>
           </div>
         </div>
+        <div class="DarkMode-wrapper">
+          <div class="img-btn-index">
+            <div class="DarkMode-img-btn-light img-btn" data-darkValue="light" id="DarkMode-img-btn-light"></div>
+            <div class="DarkMode-img-btn-dark img-btn" data-darkValue="dark" id="DarkMode-img-btn-dark"></div>
+          </div>
+        </div>
         <div class="footer">
+          <div class="version">JERRY Clock V.1.2.4</div>
           <img src="./footer.png" />
         </div>
       </div>
@@ -80,16 +90,21 @@
     <div class="Sidebar-mask" id="Sidebar-mask" onclick="closeNav()"></div>
     <div class="control-more-mask" id="control-more-mask"></div>
     <div class="functionkey">
-      <a href="https://helpcenter.jerrypro.xyz/clock/help/docs/#/" target="_blank"><span class="material-symbols-outlined control-icon" id="helpbtn" title="Help center">help</span></a>
-      <a href="https://github.com/JerryIs-strong/jerryclock/issues" target="_blank"><span class="material-symbols-outlined control-icon" title="Bug report">bug_report</span></a>
+      <a href="https://helpcenter.jerrypro.xyz/clock/help/docs/#/" target="_blank"><span
+          class="material-symbols-outlined control-icon" id="helpbtn" title="Help center">help</span></a>
+      <a href="https://github.com/JerryIs-strong/jerryclock/issues" target="_blank"><span
+          class="material-symbols-outlined control-icon" title="Bug report">bug_report</span></a>
       <span class="material-symbols-outlined control-icon" id="litebtn" title="Super lite">sync</span>
-      <span class="material-symbols-outlined control-icon" id="control-more-btn" title="Extra application">view_cozy</span>
-       <div class="timer" id="control-more">
+      <span class="material-symbols-outlined control-icon" id="control-more-btn"
+        title="Extra application">view_cozy</span>
+      <div class="timer" id="control-more">
         <span class="material-symbols-outlined control-icon" id="control-more-icon1">hourglass_top</span>
-        <span class="material-symbols-outlined control-icon" id="control-more-icon2" style="color: #ffffff52;">hourglass_bottom</span>
-       </div>
+        <span class="material-symbols-outlined control-icon" id="control-more-icon2"
+          style="color: #ffffff52;">hourglass_bottom</span>
+      </div>
       <span class="material-symbols-outlined control-icon" id="full" title="Full screen">fit_screen</span>
-      <a href="javascript:void(0)" onclick="openNav()"><span class="material-symbols-outlined control-icon sp" title="Control panel">folder_shared</span></a>
+      <a href="javascript:void(0)" onclick="openNav()"><span class="material-symbols-outlined control-icon sp"
+          title="Control panel">folder_shared</span></a>
     </div>
   </section>
 </body>
