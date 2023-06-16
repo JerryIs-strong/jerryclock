@@ -256,6 +256,7 @@ img {
   position: absolute;
   bottom: calc(env(safe-area-inset-bottom) + 90px);
   flex-direction: column;
+  bottom: 20px;
 }
 
 .version {
