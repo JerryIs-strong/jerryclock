@@ -39,7 +39,8 @@
 
   <section class="section1 section2 section2-start" id="main-stopwatch">
     <div class="clock">
-      <a class="minutes" id="stopMinutes">00</a><a class="middle">:</a><a class="minutes" id="stopSeconds">00</a><a class="middle">:</a><a class="seconds" id="stopTens">00</a><br />
+      <a class="minutes" id="stopMinutes">00</a><a class="middle">:</a><a class="minutes" id="stopSeconds">00</a><a
+        class="middle">:</a><a class="seconds" id="stopTens">00</a><br />
       <div class="stop-btn" id="stop-btn">
         <button class="stopwatc-btn stopwatc-btns" id="button-start">Start</button>
         <button class="stopwatc-btn stopwatc-btnp" id="button-stop">Pause</button>
@@ -67,7 +68,8 @@
               class="material-symbols-outlined custom-icon">streetview</span>Custom wallpaper</h2>
           <div class="control">
             <input type="url" id="input" class="input" placeholder="https://" />
-            <label for="input" class="inline lable" id="urlDone">Done</label>
+            <label for="input" class="inline lable" id="urlDone"><span
+                class="materialsp-symbols-outlined">search</span></label>
             <input type="text" id="inputTitle" class="input" placeholder="微風迎客 軟語伴茶" maxlength="15" />
             <a class="input-count" id="input-count">0/15</a>
             <label for="click" class="inline lable"> Enable Custom mode ?<input type="checkbox" id="click"
@@ -79,6 +81,17 @@
           <div class="img-btn-index">
             <div class="DarkMode-img-btn-light img-btn" data-darkValue="light" id="DarkMode-img-btn-light"></div>
             <div class="DarkMode-img-btn-dark img-btn" data-darkValue="dark" id="DarkMode-img-btn-dark"></div>
+          </div>
+        </div>
+        <div class="iframe-area-wrapper">
+          <div class="iframe-area">
+            <div class="iframeUrl" id="iframeUrl" style="position: absolute;"></div>
+            <p class="iframeHint">輸入YouTube影片URL</p>
+          </div>
+          <div class="iframeKey">
+            <input type="url" id="inputYTCode" class="input" placeholder="https://"
+              style="margin-top: 10px;" />
+            <span class="material-symbols-outlined iframe-icon" id="iframeBtn">check_circle</span>
           </div>
         </div>
         <div class="footer">
@@ -103,8 +116,8 @@
           style="color: #ffffff52;">hourglass_bottom</span>
       </div>
       <span class="material-symbols-outlined control-icon" id="full" title="Full screen">fit_screen</span>
-      <a href="javascript:void(0)" onclick="openNav()"><span class="material-symbols-outlined control-icon sp"
-          title="Control panel">folder_shared</span></a>
+      <a href="javascript:void(0)" onclick="openNav()"><span class="material-symbols-outlined control-icon"
+          title="Control panel" style="padding-right: 19px;">folder_shared</span></a>
     </div>
   </section>
 </body>
